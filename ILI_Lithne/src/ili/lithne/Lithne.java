@@ -43,33 +43,6 @@ public class Lithne implements LithneListener
 	public static final int[] BAUDRATES  			=  { 2400, 4800, 9600, 19200, 38400, 57600, 115200 };
 	
 	
-	public static final int	F_STATE					=	001;	//Control the state of the object
-	public static final int	F_INTENSITY				=	002;	//Control the intensity of the object
-	public static final int	F_BRIGHTNESS			=	002;	//Control the brightness (intensity) of the object
-	public static final int	F_CCT					=	003;	//Control the colour temperate of the object
-	public static final int	F_COLOR					=	004;	//Control the colour of the object
-	public static final int	F_HSB					=	005;	//Control the colour of the object
-	public static final int	F_CCT_PARAMETERS		=	006;	//Control the cct_parameters of the object
-	public static final int	F_BLIND					=	007;	//Control all light parameters of the object
-	
-	public static final int	F_ATMOSPHERE			=	011;	//
-	public static final int	F_META_PARAMETERS		=	012;	//
-	
-	public static final int	F_HUE					=	015;	//
-	public static final int	F_SATURATION			=	016;	//
-	
-	public static final int F_SENSOR				=	020;
-	
-	public static final int	F_HELLOWORLD			=	201;	//Indicate your presence to the world
-	public static final int	F_METAINFO				=	202;	//Provide meta information, such as category and type 
-	public static final int	F_FUNCTIONLIST			=	203;	//Submit publicly accessible function numbers
-	public static final int	F_NODE_STATUS			=	204;	//Request the status of a node
-	public static final int	F_LIGHT_STATUS			=	205;	//Request the status of a node
-	
-	public static final int	F_ERROR					=	255;
-	
-	private Node _localNode							=	new Node( Lithne.UNKNOWN_64, Lithne.UNKNOWN_16 );
-	
 	private XBee _xbee;
 	XBeeResponse response;
 	Queue<XBeeResponse> queue = new ConcurrentLinkedQueue<XBeeResponse>();

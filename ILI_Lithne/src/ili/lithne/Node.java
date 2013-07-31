@@ -1,7 +1,7 @@
 package ili.lithne;
 
 import processing.core.*;
-import processing.xml.*;
+import processing.data.XML;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -70,7 +70,7 @@ public class Node implements XBeeListener, LithneListener
 		this.setName(name);
 		this.setID(id);
 	}
-	public Node ( XMLElement node )
+	public Node ( XML node )
 	{
 		String xbeeAddress64	=	node.getString("XBeeAddress64");
 		String xbeeAddress16	=	node.getString("XBeeAddress16");
@@ -89,13 +89,13 @@ public class Node implements XBeeListener, LithneListener
 	}
 	
 	/**
-	 * Returns the information of this node as an XMLElement. Easy to store somewhere or pass around.
+	 * Returns the information of this node as an XML. Easy to store somewhere or pass around.
 	 * The format is <Node XBeeAddres64="XX XX XX XX XX XX XX XX" XBeeAddress16="XX XX" name="name" id="XX" />
-	 * @return XMLElement
+	 * @return XML
 	 */
-	public XMLElement getAsXML()
+	public XML getAsXML()
 	{
-		XMLElement xml	=	new XMLElement("Node");
+		XML xml	=	new XML("Node");
 		xml.setString("XBeeAddress64", Lithne.addressToString( this.getXBeeAddress64() ) );
 		xml.setString("XBeeAddress16", Lithne.addressToString( this.getXBeeAddress16() ) );
 		xml.setString("name", this.getName() );
