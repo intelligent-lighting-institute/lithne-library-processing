@@ -2,10 +2,10 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="lib/log4j.jar"/>
-	<classpathentry kind="lib" path="lib/RXTXcomm.jar"/>
-	<classpathentry kind="lib" path="lib/serial.jar"/>
-	<classpathentry kind="lib" path="lib/xbee.jar"/>
-	<classpathentry kind="lib" path="lib/core.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/EclipseWorkspace/libs/RXTXcomm.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/EclipseWorkspace/libs/core.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/EclipseWorkspace/libs/log4j.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/EclipseWorkspace/libs/serial.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/EclipseWorkspace/libs/xbee.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
