@@ -896,7 +896,7 @@ public class Lithne implements LithneListener
 	   * @param Message
 	   * @return Message
 	   */
-	  private Message appendMessage( Message originalMessage )
+	  private synchronized Message appendMessage( Message originalMessage )
 	  {
 //	    this.traceln("APPENDMESSAGE( MESSAGE ): Appending any similar messages to "+originalMessage.toString() );
 	    for( int i=0; i < this.getMessagesInOutbox(); i++ )
@@ -948,7 +948,7 @@ public class Lithne implements LithneListener
 	  /**  
 	   * Checks whether the next message in the outbox has been delivered and then deletes it  
 	   **/
-	  private void cleanOutbox()
+	  private synchronized void cleanOutbox()
 	  {
 //	    this.traceln("CLEANOUTBOX(): Cleaning up outbox.", 1);
 //	    this.printOutbox();
